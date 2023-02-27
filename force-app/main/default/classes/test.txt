@@ -1,0 +1,88 @@
+// new project (phase in salesforce) at qms , property child 
+{phase: '0x123213123123'}
+
+//throwing property list, doesnt matter the status
+{
+    {lotName = 'A-12321',
+    ifcaId = 'A-12321-ifcaID',
+    assetId = '0x123213123123',
+    phaseid='0x123213123123',
+    status = 'Signed',
+    projectId = 'serene'
+    {
+        MainBuyerName = 'Ah Song',
+        {
+            JointBuyer = 'Ah Meng'
+        }
+    }
+    },
+
+    {lotName = 'A-12322',
+    ifcaId = 'A-12321-ifcaID',
+    AssetId = '0x123213123124',
+    phaseid='0x123213123124',
+    projectid= 'serene'
+    Status = 'signed',
+    {
+        MainBuyerName = 'syaheed',
+        {
+            JointBuyer = 'Luq'
+        }
+    }
+    }
+    ,
+
+    {lotName = 'A-12323',
+    ifcaId = 'A-12323-ifcaID',
+    AssetId = 'n/a',
+    phaseid='0x123213123123',
+    projectid= 'serene'
+    Status = 'Available'
+    }
+
+
+}
+// cancel booking after set up, need to update the phase is already set up in qms
+{
+    Status = 'cancel',
+    comment = 'please clear lot',
+    assetid = 'A-12321',
+    ifcaid = 'ifcaid'
+
+}
+// new booking after set up, need to update the phase is already set up in qms
+{
+    Status = 'new booking',
+    comment = 'please update lot',
+    lotid = 'A-12321',
+    assetId = '0x123213123123',
+    phaseid='0x123213123123',
+    ifcaid= 'ifcaId',
+    projectId = 'serene'
+    {
+        MainBuyerName = 'Ah Song',
+        {
+            JointBuyer = 'Ah Meng'
+        }
+    }
+
+
+}
+// update buyer details after set up, need to update the phase is already set up in qms
+{
+    Status = 'Update buyer',
+    comment = 'please update buyer at lot',
+    lotid = 'A-12321',
+    ifcaId = 'ifcaId',
+    assetId = '0x123213123123',
+    phaseid='0x123213123123',
+    projectId = 'serene'
+    {
+        MainBuyerName = 'Ah Song',
+        {
+            JointBuyer = 'Ah Meng 2'
+        }
+    }
+
+
+}

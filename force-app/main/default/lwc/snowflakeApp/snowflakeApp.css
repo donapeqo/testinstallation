@@ -1,0 +1,96 @@
+
+
+* { box-sizing:border-box; }
+
+html, body { position:relative; width:100%; height:100%; }
+
+body {
+  position:absolute;  
+  display:flex;
+  flex-direction:column;
+  background-size:100%;
+  text-align:center;
+  overflow:hidden;
+  user-select:none;
+}
+
+
+.snowflake {
+  position:relative;
+  display:inline-block;
+  color:snow;
+  font-family:"Georgia", serif;
+  line-height:0;
+  width:8rem;
+  height:8rem;
+  -webkit-animation:spin 20s linear infinite, glow 2s linear infinite;
+  animation:spin 20s linear infinite, glow 2s linear infinite;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+@keyframes spin {
+  0%{ transform:rotate(0); }
+  100%{ transform:rotate(1turn); }
+}
+@keyframes glow { 50%{ text-shadow:0 0 3rem #a7333333; } }
+
+
+.snowflake s {
+  display:flex;
+  position:absolute;
+  justify-content: center;
+  transform-origin:center top;
+  font-family:monospace;
+  width:8rem;
+  height:4rem;
+  font-size:8rem;
+  text-decoration:none;
+  letter-spacing:-.5rem;
+}
+
+.snowflake s:nth-child(2){ transform:rotate(.2turn); }
+.snowflake s:nth-child(3){ transform:rotate(.4turn); }
+.snowflake s:nth-child(4){ transform:rotate(.6turn); }
+.snowflake s:nth-child(5){ transform:rotate(.8turn); }
+
+.snowglobe{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    margin-top: 30px;
+}
+
+
+section { flex:1; padding:3rem; }
+
+header {
+  background: darkred;
+  padding:1rem;
+  color:#ffffffe6;
+  display: flex;
+  justify-content: center;
+
+}
+
+label {
+   line-height:2rem;
+  font-size:1rem;  
+}
+
+input {
+  display:inline-block;
+  padding:.5rem;
+  border-radius:.25rem;
+  margin:0 .25rem;
+  width:5rem;
+  font-size:1.5rem;
+  line-height:1rem;
+  color:#ffffffe6;
+  border:0;
+  background:#0000001a;
+  text-align:center;
+  box-shadow:inset 0 .2rem 2.5rem #0000004d, inset 0 .125rem .1rem #0000001a, 0 .0625rem .1rem #ffffff26;
+}
+
+input:focus { outline:0; }
