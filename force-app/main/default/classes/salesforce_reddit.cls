@@ -63,7 +63,10 @@ public with sharing class CustellaCreate{
         //Update ID in SF
         Map <String, Object> resultObject = (Map <String, Object>)JSON.deserializeUntyped(resBody);
         Integer resID = (Integer)resultObject.get('id');    System.debug('resId'+resID);
-        equipupdate = new Product2();   equipupdate.Id=recID;  equipupdate.Custella_ID__c = string.valueOf(resID);     System.debug('equipupdate::'+equipupdate);
+        equipupdate = new Product2();
+        equipupdate.Id=recID;  
+        equipupdate.Custella_ID__c = string.valueOf(resID);
+        System.debug('equipupdate::'+equipupdate);
         update equipupdate;
        } 
     }

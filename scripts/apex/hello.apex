@@ -11,3 +11,6 @@ System.debug('My name is ' + tempvar);
 
 Post_Example post = new POST_Example();
 post.sendPOSTReq();
+
+
+newsAPIController.requestAPI('Sports');

@@ -1,0 +1,18 @@
+<template>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <div class="prev-button" onclick={handlePrevMonth}></div>
+            <div class="current-month">{currentMonth}</div>
+            <div class="next-button" onclick={handleNextMonth}></div>
+        </div>
+        <div class="calendar-body">
+            <template for:each={weeks} for:item="week">
+                <div key={week.id} class="calendar-week">
+                    <template for:each={week} for:item="day">
+                        <div key={day.id} class={day.className}>{day.number}</div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,49 @@
+<template>
+<div>
+    <div class="slds-box" style="flex:1">
+       <lightning-combobox
+       name="category"
+       label="Category"
+       placeholder="Select Category"
+       value={value}
+       onchange={handleChange}
+       options={options}
+       ></lightning-combobox>   
+    </div>
+
+
+    <div>
+        <div>
+            <template for:each={result} for:item="item">
+                <div key={item.id} style="margin: 10px; height:40%">
+                <lightning-card icon-name="standard:news" >
+                    
+                    <h1 slot="title" class="">{item.name}</h1>
+                    
+                    <div class="slds-grid">
+                        <div class="slds-size_1-of-3" style="padding: 2%">
+                            <img src='https://picsum.photos/200/300' style="width: 150px; height:auto; " />
+                        </div>
+                        <div class="slds-size_2-of-3 slds-align_absolute-center" style="padding: 2%;">
+                            <h1 style="font-weight: bold; font-size:large;text-align: center; word-wrap: break-word; margin-left: auto; margin-right: auto; ">{item.title}</h1>
+                        </div>
+                    </div>
+                    
+                    
+                    <div slot="footer">
+                        <a href={item.url} target="_blank">Click here to read more ....</a>
+                    </div>
+                </lightning-card>
+                </div>
+              </template>
+        </div>
+
+    </div>
+    
+    
+
+  
+
+    
+</div>    
+</template>
